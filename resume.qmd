@@ -15,20 +15,17 @@ format:
 ```{=typst}
 #import "formatters.typ": *
 #show: heading-style
-#let doc-target = "resume"
 
-#v(-20pt)
-#align(center)[
-  #link("mailto:dalton@kutzen.org")
-  #text(fill: luma(55%))[ · ]
-  #link("[https://github.com/dkutzen22](https://github.com/dkutzen22)")[GitHub.com/dkutzen22]
-  #text(fill: luma(55%))[ · ]
-  #link("[https://www.linkedin.com/in/daltonkutzen](https://www.linkedin.com/in/daltonkutzen)")[LinkedIn.com/in/daltonkutzen]
-]
+#let data-dir = "data"
+#let doc = "resume"
 
-#render-education(target: "resume")
-#render-experience(target: "resume")
-#render-projects(target: "resume")
-#render-skills(target: "resume")
-#render-leadership(target: "resume")
+#render-contact(email: "dalton@kutzen.org", github: "dkutzen22", linkedin: "daltonkutzen")
+#render-experiences(title: "Education", path: data-dir + "/education.yml", target: doc)
+#render-experiences(title: "Research & Professional Experience", path: data-dir + "/experience.yml", target: doc)
+#render-research(title: "Publications & Preprints", path: data-dir + "/publications.yml", target: doc)
+#render-research(title: "Presentations & Posters", path: data-dir + "/presentations.yml", target: doc)
+#render-experiences(title: "Projects", path: data-dir + "/projects.yml", target: doc)
+#render-skills(title: "Skills", path: data-dir + "/skills.yml",target: doc)
+#render-experiences(title: "Leadership & Service", path: data-dir + "/leadership.yml", target: doc)
+#render-awards(title: "Honors & Awards", path: data-dir + "/awards.yml",target: doc)
 ```
