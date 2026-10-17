@@ -57,8 +57,8 @@ quarto render cv.qmd --to typst
 The rendered PDFs are saved to:
 
 ```text
-output/Dalton-Kutzen-Resume.pdf
-output/Dalton-Kutzen-CV.pdf
+output/Dalton_Kutzen-Resume.pdf
+output/Dalton_Kutzen-CV.pdf
 ```
 
 The output directory is configured in `_quarto.yml`.
@@ -81,93 +81,21 @@ Edit the YAML front matter at the top of `resume.qmd`:
 ```yaml
 ***
 title: "Dalton Kutzen"
-author: "Dalton Kutzen"
-output-file: "Dalton-Kutzen-Resume"
+output-file: "Dalton_Kutzen-Resume"
 ***
 ```
 
 - `title` controls the name displayed at the top of the document.
-- `author` supplies document metadata.
 - `output-file` controls the generated PDF filename.
 
 For example:
 
 ```yaml
-output-file: "Dalton-Kutzen-Bioinformatics-Resume"
+output-file: "Dalton_Kutzen-Bioinformatics-Resume"
 ```
 
 will generate:
 
 ```text
-output/Dalton-Kutzen-Bioinformatics-Resume.pdf
+output/Dalton_Kutzen-Bioinformatics-Resume.pdf
 ```
-
-## Formatting Dates on the Right
-
-Use a raw Typst grid for education, experience, and project headings with dates aligned to the right margin:
-
-````markdown
-```{=typst}
-#grid(
-  columns: (1fr, auto),
-  align: (left, right),
-  gutter: 0pt,
-  [#strong[Brigham Young University — B.S. Molecular Biology]],
-  [Expected Apr. 2027],
-)
-```
-````
-
-This produces a layout similar to:
-
-```text
-Brigham Young University — B.S. Molecular Biology       Expected Apr. 2027
-```
-
-A typical education entry might look like:
-
-````markdown
-## Education
-
-```{=typst}
-#grid(
-  columns: (1fr, auto),
-  align: (left, right),
-  gutter: 0pt,
-  [#strong[Brigham Young University]],
-  [Expected Apr. 2027],
-)
-```
-
-B.S. Molecular Biology · Provo, Utah
-
-- Relevant coursework: molecular biology, genetics, statistics, calculus, and bioinformatics.
-````
-
-## Contact Block
-
-For a centered contact block in Typst/PDF output, use raw Typst alignment:
-
-````markdown
-```{=typst}
-#align(center)[
-```
-
-Provo, Utah ·
-[dalton@kutzen.org](mailto:dalton@kutzen.org) ·
-[GitHub](https://github.com/dkutzen22) ·
-[LinkedIn](https://www.linkedin.com/in/daltonkutzen)
-
-```{=typst}
-]
-```
-````
-
-Do not rely on HTML-only CSS such as:
-
-```markdown
-style="text-align: center;"
-```
-
-when rendering to Typst. Native Typst alignment is more reliable for PDF output.
-
