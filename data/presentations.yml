@@ -1,6 +1,6 @@
-- presenters: "Duffy, M. E., **Kutzen, D.**, Grose, J. H."
-  title: "Characterizing Proteus mirabilis Phages for Clinical Applications"
-  event: "American Society for Microbiology, Intermountain Branch Conference"
-  location: "Salt Lake City, UT."
+- authors: "Duffy, M. E., **Kutzen, D.**, Grose, J. H."
   dates: "Apr 2026"
-  type: "Poster Presentation"
+  title: "*Characterizing Proteus mirabilis Phages for Clinical Applications*"
+  format: "Poster Presentation"
+  location: "American Society for Microbiology, Intermountain Branch Conference, Salt Lake City, UT"
+  show_in: [cv]

@@ -1,8 +1,6 @@
 - authors: "Fullmer, K. J., **Kutzen, D.**, Terooatea, T. W."
-  title: "Additive-input encoding fails operator-level target-held-out prediction on current Perturb-seq screens"
-  status: "preprint"
-  venue: "bioRxiv"
-  year: "2026"
-  code_link: "https://github.com/manarai/Anchor-op"
-  code_name: "Code"
-  pub_link: "https://doi.org/10.64898/2026.09.30.755776"
+  dates: "2026"
+  title: "*Additive-input encoding fails operator-level target-held-out prediction on current Perturb-seq screens*"
+  format: "[preprint](https://doi.org/10.64898/2026.09.30.755776)"
+  location: "bioRxiv. [[Code]](https://github.com/manarai/Anchor-op)"
+  show_in: [cv]

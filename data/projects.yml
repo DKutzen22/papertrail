@@ -1,15 +1,13 @@
-- name: "Phantom — Bacteriophage Analysis Workflow"
-  link: "https://github.com/dkutzen22/phantom"
+- title: "[Phantom — Bacteriophage Analysis Workflow](https://github.com/dkutzen22/phantom)"
   dates: "Jun 2026 – Present"
-  show_in: ["resume", "cv"]
   details:
     - "Modular Snakemake pipeline for phage genome annotation and downstream comparative analysis."
     - "Uses isolated Conda environments and declarative workflow rules to make runs reproducible across systems."
+  show_in: [resume, cv]
 
-- name: "Self-Hosted Systems and Infrastructure"
-  link: "https://github.com/dkutzen22"
+- title: "[Self-Hosted Systems and Infrastructure](https://github.com/dkutzen22)"
   dates: "Dec 2025 - Present"
-  show_in: ["cv"]
   details:
     - "Built a Linux-based environment for code hosting, containers, services, and research project organization."
     - "Applied infrastructure-as-code and documentation practices to reduce configuration drift."
+  show_in: [cv]

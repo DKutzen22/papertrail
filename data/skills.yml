@@ -1,12 +1,44 @@
-- category: "Computational Biology"
-  skills: "Single-cell transcriptomics, Perturb-seq analysis, comparative genomics, Snakemake, Conda, Biopython"
+- category: Computational Biology
+  skills: 
+    - Single-cell transcriptomics
+    - Perturb-seq analysis
+    - comparative genomics
+    - Snakemake
+    - Conda
+    - Biopython
+  show_in: [resume, cv]
 
-- category: "Wet Lab & Molecular Biology"
-  skills: "Phage and bacterial culturing, plaque & spot assays, host range testing, media preparation, agarose gel electrophoresis"
+- category: Wet Lab & Molecular Biology
+  skills: 
+    - Phage and bacterial culturing
+    - plaque & spot assays
+    - host range testing
+    - media preparation
+    - agarose gel electrophoresis
+  show_in: [resume, cv]
 
-- category: "Programming & Data"
-  skills: "Python, R, Bash, SQL, Git, pandas, tidyverse, ggplot2, Quarto"
+- category: Programming & Data
+  skills: 
+    - Python
+    - R
+    - Bash
+    - SQL
+    - Git
+    - pandas
+    - tidyverse
+    - ggplot2
+    - Quarto
+  show_in: [resume, cv]
 
-- category: "IT & Systems Infrastructure"
-  skills: "IT Service Management (ITSM), Linux server administration, Proxmox, Docker, enterprise endpoint management, networking, project management, technical mentoring, documentation"
-
+- category: IT & Systems Infrastructure
+  skills: 
+    - IT Service Management (ITSM)
+    - Linux server administration
+    - Proxmox
+    - Docker
+    - enterprise endpoint management
+    - networking
+    - project management
+    - technical mentoring
+    - documentation
+  show_in: [resume, cv]

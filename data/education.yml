@@ -1,5 +1,6 @@
-- degree: "B.S. Molecular Biology"
-  institution: "Brigham Young University"
+- title: "Brigham Young University"
+  degree: "B.S. Molecular Biology"
   location: "Provo, Utah"
-  dates: "Expected Apr 2028"
-#  details:
+  dates: "Jan 2025 - Apr 2028 (Expected)"
+# details:
+  show_in: [resume, cv]

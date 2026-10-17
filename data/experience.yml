@@ -2,7 +2,7 @@
   organization: "Terooatea Lab, Brigham Young University"
   location: "Provo, UT"
   dates: "Aug 2026 – Present"
-  show_in: ["resume", "cv"]
+  show_in: [resume, cv]
   details:
     - "Developed computational methods and benchmark evaluations for high-dimensional single-cell RNA-seq (scRNA-seq) and pooled Perturb-seq screens (`anchor-op`)."
     - "Evaluated whether additive-input models generalize to unseen perturbation targets in pooled Perturb-seq screens."
@@ -11,7 +11,7 @@
   organization: "Grose Lab, Brigham Young University"
   location: "Provo, UT"
   dates: "Sep 2025 – Present"
-  show_in: ["resume", "cv"]
+  show_in: [resume, cv]
   details:
     - "Prepared media, cultured bacteriophages with bacterial hosts, and conducted plaque and spot assays to evaluate phage activity and host interactions."
     - "Performed bioinformatic analyses to annotate and compare phage genomes, creating the **Phantom** Snakemake pipeline for reproducible annotation."
@@ -21,7 +21,7 @@
   organization: "College of Life Sciences, Brigham Young University"
   location: "Provo, UT"
   dates: "May 2026 – Present"
-  show_in: ["resume", "cv"]
+  show_in: [resume, cv]
   details:
     - "Mentor student technicians in troubleshooting best practices and train new hires on Life Sciences IT infrastructure, tools, and clear user communication."
     - "Drove internal automation, documentation, and reporting initiatives that reduced repetitive workflows and standardized support delivery college-wide."
@@ -30,6 +30,6 @@
   organization: "College of Life Sciences, Brigham Young University"
   location: "Provo, UT"
   dates: "Aug 2025 – May 2026"
-  show_in: ["resume", "cv"]
+  show_in: [resume, cv]
   details:
     - "Supported deployment, security, and maintenance of 1,000+ campus workstations and lab computers serving a community of 5,000+ users."

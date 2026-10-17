@@ -1,12 +1,14 @@
 - name: "Experiential Learning Grant"
-  institution: "Department of Micro and Molecular Biology, Brigham Young University"
+  organization: "Department of Micro and Molecular Biology, Brigham Young University"
   dates: "Fall 2026"
+  show_in: [cv]
 
 - name: "William Bartlett Hebard Scholarship"
-  institution: "College of Life Sciences, Brigham Young University"
+  organization: "College of Life Sciences, Brigham Young University"
   dates: "Fall 2026"
+  show_in: [cv]
 
 - name: "Experiential Learning Grant"
-  institution: "Department of Micro and Molecular Biology, Brigham Young University"
+  organization: "Department of Micro and Molecular Biology, Brigham Young University"
   dates: "Spring 2026"
-
+  show_in: [cv]
