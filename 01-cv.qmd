@@ -1,27 +1,23 @@
 ---
-title: "Dalton Kutzen"
 subtitle: "Curriculum Vitae"
-output-file: "Dalton_Kutzen-CV"
-
 format:
   typst:
-    papersize: us-letter
     margin:
       top: 0.3in
       bottom: 0.75in
       x: 0.75in
     fontsize: 10pt
-    linkcolor: "#1F4E79"
+output-file: "Dalton_Kutzen-CV"
 ---
 
 ```{=typst}
 #import "00-formatters.typ": *
 #show: heading-style
 
-#let data-dir = "data"
+// This will filter by the show-in value
 #let doc = "cv"
 
-#render-contact(email: "dalton@kutzen.org", github: "dkutzen22", linkedin: "daltonkutzen")
+#render-contact()
 #render-experiences(title: "Education", path: data-dir + "/education.yml", target: doc)
 #render-experiences(title: "Research & Professional Experience", path: data-dir + "/experience.yml", target: doc)
 #render-research(title: "Publications & Preprints", path: data-dir + "/publications.yml", target: doc)

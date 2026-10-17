@@ -5,6 +5,18 @@ project:
     - 01-cv.qmd
     - 02-resume.qmd
 
+title: "Dalton Kutzen"
+format:
+  typst:
+    papersize: us-letter
+    linkcolor: "#1F4E79"
+
+config:
+  data-dir: "data"
+  email: "dalton@kutzen.org"
+  github: "dkutzen22"
+  linkedin: "daltonkutzen"
+
 execute:
   echo: false
   warning: false

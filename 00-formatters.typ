@@ -3,6 +3,11 @@
 // Sets accent color to blue
 #let accent-color = rgb("#1F4E79")
 
+//pulls config from _quarto.yml
+#let settings = yaml("_quarto.yml")
+#let config = settings.at("config")
+#let data-dir = config.at("data-dir")
+
 // Condenses spacing of the file heading
 #let heading-style(body) = {
   show heading.where(level: 1): it => block(
@@ -98,9 +103,9 @@
 
 // Creates a contact block, with dots between the hyper-linked entries
 #let render-contact(
-  email: "",
-  github: "",
-  linkedin: "",
+  email: config.at("email", default: ""),
+  github: config.at("github", default: ""),
+  linkedin: config.at("linkedin", default: ""),
 ) = {
   let contacts = ()
 
