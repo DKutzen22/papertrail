@@ -77,7 +77,7 @@ For example, when `title` and `description` are selected for conversion:
 
 ```yaml
 - title: "[Phantom — Bacteriophage Analysis Workflow](https://github.com/dkutzen22/phantom)"
-  description: "A **reproducible** workflow for *bacteriophage* genome analysis."
+  details: "A **reproducible** workflow for *bacteriophage* genome analysis."
   show_in: [resume, cv]
 ```
 
