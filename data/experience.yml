@@ -1,35 +1,39 @@
-- title: "Bioinformatics Researcher"
-  organization: "Terooatea Lab, Brigham Young University"
-  location: "Provo, UT"
-  dates: "Aug 2026 – Present"
+- title: "Software Engineering Intern"
+  organization: "Datadog"
+  location: "New York, NY"
+  dates: "Jun 2024 – Aug 2024"
   show_in: [resume, cv]
   details:
-    - "Developed computational methods and benchmark evaluations for high-dimensional single-cell RNA-seq (scRNA-seq) and pooled Perturb-seq screens (`anchor-op`)."
-    - "Evaluated whether additive-input models generalize to unseen perturbation targets in pooled Perturb-seq screens."
+    - "Engineered high-throughput event streaming pipelines using Go and Apache Kafka, processing 50M+ telemetry metrics daily with sub-second latency."
+    - "Designed and deployed containerized RESTful microservices with Docker and Kubernetes, reducing API response times by 35%."
+    - "Implemented automated end-to-end integration test suites in CI/CD pipelines, increasing branch test coverage from 78% to 93%."
 
-- title: "Research Assistant"
-  organization: "Grose Lab, Brigham Young University"
-  location: "Provo, UT"
-  dates: "Sep 2025 – Present"
+- title: "Undergraduate Research Assistant"
+  organization: "NYU Courant Machine Learning and Systems Lab"
+  location: "New York, NY"
+  dates: "Sep 2023 – May 2024"
   show_in: [resume, cv]
   details:
-    - "Prepared media, cultured bacteriophages with bacterial hosts, and conducted plaque and spot assays to evaluate phage activity and host interactions."
-    - "Performed bioinformatic analyses to annotate and compare phage genomes, creating the **Phantom** Snakemake pipeline for reproducible annotation."
-    - "Integrated wet lab microbiology techniques with computational genomics to investigate phage diversity, host range, and therapeutic applications."
+    - "Researched memory-efficient attention mechanisms and distributed training optimizations for transformer models in PyTorch."
+    - "Profiled GPU kernel execution with NVIDIA Nsight and CUDA to identify memory bandwidth bottlenecks during multi-GPU inference."
+    - "Developed scalable data preprocessing pipelines in Python and Ray to clean and tokenize 2TB+ multimodal benchmark datasets."
 
-- title: "IT Service Desk Supervisor"
-  organization: "College of Life Sciences, Brigham Young University"
-  location: "Provo, UT"
-  dates: "May 2026 – Present"
+- title: "Software Engineering Intern"
+  organization: "MongoDB"
+  location: "New York, NY"
+  dates: "Jun 2023 – Aug 2023"
   show_in: [resume, cv]
   details:
-    - "Mentor student technicians in troubleshooting best practices and train new hires on Life Sciences IT infrastructure, tools, and clear user communication."
-    - "Drove internal automation, documentation, and reporting initiatives that reduced repetitive workflows and standardized support delivery college-wide."
+    - "Built full-stack telemetry dashboards using TypeScript, React, and Node.js for real-time database cluster health monitoring."
+    - "Optimized aggregation pipeline queries for distributed document collections, improving query execution latency by 40%."
+    - "Collaborated across an agile team of 6 engineers using Git, code reviews, and bi-weekly sprint planning."
 
-- title: "IT Service Desk Technician"
-  organization: "College of Life Sciences, Brigham Young University"
-  location: "Provo, UT"
-  dates: "Aug 2025 – May 2026"
-  show_in: [resume, cv]
+- title: "Undergraduate Teaching Assistant"
+  organization: "NYU Department of Computer Science"
+  location: "New York, NY"
+  dates: "Jan 2023 – May 2024"
+  show_in: [cv]
   details:
-    - "Supported deployment, security, and maintenance of 1,000+ campus workstations and lab computers serving a community of 5,000+ users."
+    - "Led weekly recitation sessions and lab hours for 120+ students in Data Structures and Algorithms."
+    - "Held 1-on-1 office hours to provide debugging guidance and algorithmic problem-solving strategies in Java and Python."
+    - "Graded weekly programming projects, written assignments, and exams with comprehensive feedback."

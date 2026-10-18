@@ -1,14 +1,19 @@
-- name: "Experiential Learning Grant"
-  organization: "Department of Micro and Molecular Biology, Brigham Young University"
-  dates: "Fall 2026"
+- name: "Dean's Undergraduate Research Fund (DURF) Grant"
+  organization: "College of Arts & Science, New York University"
+  dates: "Spring 2024"
   show_in: [cv]
 
-- name: "William Bartlett Hebard Scholarship"
-  organization: "College of Life Sciences, Brigham Young University"
-  dates: "Fall 2026"
+- name: "Courant Academic Excellence in Computer Science Award"
+  organization: "Courant Institute of Mathematical Sciences, New York University"
+  dates: "May 2024"
   show_in: [cv]
 
-- name: "Experiential Learning Grant"
-  organization: "Department of Micro and Molecular Biology, Brigham Young University"
-  dates: "Spring 2026"
+- name: "1st Place Winner — Systems & Infrastructure Track"
+  organization: "HackNYU Annual Hackathon"
+  dates: "Feb 2023"
+  show_in: [cv]
+
+- name: "Dean's Honors List"
+  organization: "New York University"
+  dates: "Fall 2020 – Spring 2024"
   show_in: [cv]

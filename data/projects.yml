@@ -1,13 +1,22 @@
-- title: "[Phantom — Bacteriophage Analysis Workflow](https://github.com/dkutzen22/phantom)"
-  dates: "Jun 2026 – Present"
-  details:
-    - "Modular Snakemake pipeline for phage genome annotation and downstream comparative analysis."
-    - "Uses isolated Conda environments and declarative workflow rules to make runs reproducible across systems."
+- title: "[RaftKV — Distributed Fault-Tolerant Key-Value Store](https://github.com/alex-example/raft-kv)"
+  dates: "Jan 2024 – Apr 2024"
   show_in: [resume, cv]
-
-- title: "[Self-Hosted Systems and Infrastructure](https://github.com/dkutzen22)"
-  dates: "Dec 2025 - Present"
   details:
-    - "Built a Linux-based environment for code hosting, containers, services, and research project organization."
-    - "Applied infrastructure-as-code and documentation practices to reduce configuration drift."
+    - "Engineered a distributed key-value store in Go implementing the Raft consensus protocol for high availability and strong consistency."
+    - "Supported leader election, log replication, dynamic cluster reconfiguration, and snapshot compaction."
+    - "Benchmarked performance under simulated network partitions, sustaining 15,000+ requests/sec across 5-node clusters."
+
+- title: "[CloudNet — Containerized Microservices Platform](https://github.com/alex-example/cloudnet)"
+  dates: "Sep 2023 – Dec 2023"
+  show_in: [resume, cv]
+  details:
+    - "Architected a scalable microservices web application using Python (FastAPI), React, PostgreSQL, and Redis caching."
+    - "Automated continuous integration and deployment with GitHub Actions and Helm charts to a Kubernetes cluster."
+    - "Integrated Prometheus metrics and Grafana dashboards for real-time monitoring of service latency and resource usage."
+
+- title: "[NeuralCode — Semantic Code Search & Summarization](https://github.com/alex-example/neural-code)"
+  dates: "Feb 2023 – May 2023"
   show_in: [cv]
+  details:
+    - "Fine-tuned a CodeBERT transformer model using PyTorch and Hugging Face to generate natural language docstrings from Python source code."
+    - "Built an interactive web interface with Next.js and Milvus vector database for sub-50ms natural language semantic code search."

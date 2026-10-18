@@ -1,4 +1,4 @@
-# Dalton Kutzen - Resume & CV
+# Papertrail - Resume as Code
 
 A reproducible Resume and CV combo built with [Quarto](https://quarto.org/) and rendered to PDF with [Typst](https://typst.app/).
 

@@ -1,6 +1,13 @@
-- authors: "Duffy, M. E., **Kutzen, D.**, Grose, J. H."
-  dates: "Apr 2026"
-  title: "*Characterizing Proteus mirabilis Phages for Clinical Applications*"
+- authors: "**Morgan, A.**, Chen, H., Bruna, J."
+  dates: "Apr 2024"
+  title: "*Optimizing Memory Bandwidth in Multi-GPU Transformer Training*"
+  format: "Oral Presentation"
+  location: "NYU Courant Undergraduate Research Showcase, New York, NY"
+  show_in: [cv]
+
+- authors: "**Morgan, A.**, Zhang, L."
+  dates: "Oct 2023"
+  title: "*Consensus Protocol Performance Under High Network Latency*"
   format: "Poster Presentation"
-  location: "American Society for Microbiology, Intermountain Branch Conference, Salt Lake City, UT"
+  location: "ACM Richard Tapia Celebration of Diversity in Computing, Dallas, TX"
   show_in: [cv]

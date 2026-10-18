@@ -1,6 +1,8 @@
-- title: "Brigham Young University"
-  degree: "B.S. Molecular Biology"
-  location: "Provo, Utah"
-  dates: "Jan 2025 - Apr 2028 (Expected)"
-# details:
+- title: "New York University"
+  degree: "B.S. in Computer Science"
+  location: "New York, NY"
+  dates: "Sep 2020 – May 2024"
+  details:
+    - "Minor in Mathematics | GPA: 3.88 / 4.0 | Dean's Honor List"
+    - "Relevant Coursework: Data Structures & Algorithms, Operating Systems, Computer Systems Organization, Database Systems, Computer Networks, Distributed Systems, Machine Learning"
   show_in: [resume, cv]

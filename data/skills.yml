@@ -1,44 +1,47 @@
-- category: Computational Biology
-  skills: 
-    - Single-cell transcriptomics
-    - Perturb-seq analysis
-    - comparative genomics
-    - Snakemake
-    - Conda
-    - Biopython
-  show_in: [resume, cv]
-
-- category: Wet Lab & Molecular Biology
-  skills: 
-    - Phage and bacterial culturing
-    - plaque & spot assays
-    - host range testing
-    - media preparation
-    - agarose gel electrophoresis
-  show_in: [resume, cv]
-
-- category: Programming & Data
+- category: Languages
   skills: 
     - Python
-    - R
-    - Bash
+    - Go
+    - C/C++
+    - Java
+    - TypeScript
+    - JavaScript
     - SQL
-    - Git
-    - pandas
-    - tidyverse
-    - ggplot2
-    - Quarto
+    - Rust
+    - Bash
   show_in: [resume, cv]
 
-- category: IT & Systems Infrastructure
+- category: Frameworks & Libraries
   skills: 
-    - IT Service Management (ITSM)
-    - Linux server administration
-    - Proxmox
+    - React
+    - Node.js
+    - FastAPI
+    - Next.js
+    - PyTorch
+    - Express
+    - GraphQL
+    - gRPC
+  show_in: [resume, cv]
+
+- category: Systems & Cloud
+  skills: 
     - Docker
-    - enterprise endpoint management
-    - networking
-    - project management
-    - technical mentoring
-    - documentation
+    - Kubernetes
+    - Linux / Unix
+    - AWS (EC2, S3, Lambda)
+    - PostgreSQL
+    - Redis
+    - Apache Kafka
+    - Git
+    - CI/CD (GitHub Actions)
+  show_in: [resume, cv]
+
+- category: Core Concepts
+  skills: 
+    - Distributed Systems
+    - Algorithms & Data Structures
+    - Object-Oriented Design
+    - RESTful APIs
+    - Microservices
+    - Machine Learning
   show_in: [resume, cv]

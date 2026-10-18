@@ -1,27 +1,17 @@
-- title: "Initiative Lead"
-  organization: "Leadership and the Scriptures, Brigham Young University"
-  location: "Provo, UT"
-  dates: "Jan 2026 – Present"
+- title: "President & Workshop Lead"
+  organization: "ACM Student Chapter, New York University"
+  location: "New York, NY"
+  dates: "May 2023 – May 2024"
   details:
-    - "Plan and facilitate structured discussions connecting scriptural principles with practical leadership in academic, community, and professional settings."
-    - "Guide participants in developing actionable leadership habits centered on empathy, honoring agency, and fostering personal and interpersonal accountability."
+    - "Organized 15+ technical workshops on systems programming, technical interview preparation, and cloud computing for 300+ members."
+    - "Directed HackNYU hackathon logistics, securing $20,000 in industry sponsorships and coordinating 400+ participants."
   show_in: [cv]
 
-- title: "Counselor and Youth Mentor"
-  organization: "FSY Conferences"
-  location: "United States"
-  dates: "May 2025 – Aug 2025"
+- title: "Peer Mentor"
+  organization: "Department of Computer Science, New York University"
+  location: "New York, NY"
+  dates: "Sep 2022 – May 2024"
   details:
-    - "Mentored cohorts of 15–25 youth participants, facilitating daily meetings, leadership workshops, and goal-setting activities."
-    - "Motivated participants to establish actionable personal and academic goals, develop effective study habits, and strengthen character traits."
-    - "Reported regularly to conference leadership regarding participant progress, group dynamics, and logistical improvements."
-  show_in: [cv]
-
-- title: "Full-Time Volunteer"
-  organization: "The Church of Jesus Christ of Latter-day Saints"
-  location: "Wichita, Kansas"
-  dates: "Mar 2022 – Mar 2024"
-  details:
-    - "Supervised and trained 200+ volunteers throughout the state of Kansas, enhancing operational productivity and organizational goal execution."
-    - "Provided daily instruction, counseling, and community service to individuals and families to support personal well-being and life skills."
+    - "Mentored 20+ first-year computer science undergraduates on course planning, study strategies, and research opportunities."
+    - "Facilitated bi-weekly collaborative study circles for foundational computer science and discrete mathematics courses."
   show_in: [cv]

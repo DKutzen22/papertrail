@@ -1,6 +1,13 @@
-- authors: "Fullmer, K. J., **Kutzen, D.**, Terooatea, T. W."
-  dates: "2026"
-  title: "*Additive-input encoding fails operator-level target-held-out prediction on current Perturb-seq screens*"
-  format: "[preprint](https://doi.org/10.64898/2026.09.30.755776)"
-  location: "bioRxiv. [[Code]](https://github.com/manarai/Anchor-op)"
+- authors: "Chen, H., **Morgan, A.**, LeCun, Y., Bruna, J."
+  dates: "2024"
+  title: "*Adaptive Attention Caching for Low-Latency Transformer Inference*"
+  format: "[preprint](https://doi.org/10.48550/arXiv.2404.12345)"
+  location: "arXiv:2404.12345. [[Code]](https://github.com/alex-example/adaptive-attention)"
+  show_in: [cv]
+
+- authors: "**Morgan, A.**, Zhang, L., Shasha, D."
+  dates: "2023"
+  title: "*Fault-Tolerant State Replication in Heterogeneous Edge Environments*"
+  format: "Proceedings Paper"
+  location: "IEEE International Conference on Distributed Computing Systems (ICDCS Workshops)"
   show_in: [cv]
