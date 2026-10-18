@@ -51,7 +51,7 @@ Edit the YAML front matter at the top of `01-cv.qmd` or `02-resume.qmd`:
 
 ```yaml
 ***
-output-file: "Dalton_Kutzen-Resume"
+output-file: "Resume"
 ***
 ```
 
@@ -60,13 +60,13 @@ output-file: "Dalton_Kutzen-Resume"
 For example:
 
 ```yaml
-output-file: "Dalton_Kutzen-IT-Resume"
+output-file: "Alex_Morgan-Resume"
 ```
 
 will generate:
 
 ```text
-output/Dalton_Kutzen-IT-Resume.pdf
+output/Alex_Morgan-Resume.pdf
 ```
 
 ### Use Markdown in display fields
@@ -76,16 +76,17 @@ The shared `prep()` function converts fields selected through `markdown-fields` 
 For example, when `title` and `description` are selected for conversion:
 
 ```yaml
-- title: "[Phantom — Bacteriophage Analysis Workflow](https://github.com/dkutzen22/phantom)"
-  details: "A **reproducible** workflow for *bacteriophage* genome analysis."
+- title: "[CloudNet — Containerized Microservices Platform](https://github.com/alex-example/cloudnet)"
+  details:
+    - "Architected a scalable microservices web application using Python (FastAPI), React, PostgreSQL, and Redis caching."
   show_in: [resume, cv]
 ```
 
 will generate:
 
 
-> ***[Phantom — Bacteriophage Analysis Workflow](https://github.com/dkutzen22/phantom)***
-> - A **reproducible** workflow for *bacteriophage* genome analysis.
+> ***[CloudNet — Containerized Microservices Platform](https://github.com/alex-example/cloudnet)***
+> - Architected a scalable microservices web application using Python (FastAPI), React, PostgreSQL, and Redis caching.
 
 All fields except show_in are converted by default.
 
@@ -108,15 +109,15 @@ description: "Tools: Python, R, and Bash"
 For Markdown links, quote the whole value but not the URL inside the link:
 
 ```yaml
-title: "[Phantom](https://github.com/dkutzen22/phantom)"
+title: "[CloudNet — Containerized Microservices Platform](https://github.com/alex-example/cloudnet)"
 ```
 
 For longer text, use a folded block:
 
 ```yaml
 description: >-
-  Developed a **reproducible workflow** for bacteriophage
-  genome analysis using Snakemake and Conda.
+  Architected a scalable microservices web application
+using Python (FastAPI), React, PostgreSQL, and Redis caching.
 ```
 
 Keep actual numbers and booleans unquoted when their data types matter:
@@ -192,7 +193,7 @@ quarto render 02-resume.qmd --to typst
 The rendered PDFs are saved to:
 
 ```text
-output/{name}-Resume.pdf
+output/Resume.pdf
 output/{name}-CV.pdf
 ```
 
