@@ -7,7 +7,7 @@ format:
       bottom: 0.75in
       x: 0.75in
     fontsize: 10pt
-output-file: "Curriculum_Vitae"
+output-file: "Dalton_Kutzen-CV"
 ---
 
 ```{=typst}
