@@ -34,13 +34,13 @@ jobs:
       - name: Render CV and resume
         working-directory: papertrail
         run: |
-          quarto render cv.qmd \
+          quarto render 01-cv.qmd \
             --to pdf \
             --output Dalton_Kutzen-CV.pdf \
             --output-dir _publish \
             --no-clean
 
-          quarto render resume.qmd \
+          quarto render 02-resume.qmd \
             --to pdf \
             --output Dalton_Kutzen-Resume.pdf \
             --output-dir _publish \
