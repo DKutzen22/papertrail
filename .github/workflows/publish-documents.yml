@@ -1,0 +1,94 @@
+name: Publish CV and resume to website
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-papertrail-documents
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out papertrail
+        uses: actions/checkout@v6
+        with:
+          path: papertrail
+          persist-credentials: false
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      - name: Install TinyTeX
+        run: quarto install tinytex
+
+      - name: Render CV and resume
+        working-directory: papertrail
+        run: |
+          quarto render cv.qmd \
+            --to pdf \
+            --output Dalton_Kutzen-CV.pdf \
+            --output-dir _publish \
+            --no-clean
+
+          quarto render resume.qmd \
+            --to pdf \
+            --output Dalton_Kutzen-Resume.pdf \
+            --output-dir _publish \
+            --no-clean
+
+          test -s _publish/Dalton_Kutzen-CV.pdf
+          test -s _publish/Dalton_Kutzen-Resume.pdf
+
+      - name: Check out website
+        uses: actions/checkout@v6
+        with:
+          repository: DKutzen22/kutzen.org
+          ref: main
+          token: ${{ secrets.WEBSITE_REPO_TOKEN }}
+          path: website
+
+      - name: Copy PDFs
+        run: |
+          mkdir -p website/assets/docs
+
+          cp papertrail/_publish/Dalton_Kutzen-CV.pdf \
+            website/assets/docs/Dalton_Kutzen-CV.pdf
+
+          cp papertrail/_publish/Dalton_Kutzen-Resume.pdf \
+            website/assets/docs/Dalton_Kutzen-Resume.pdf
+
+      - name: Commit and push updated PDFs
+        working-directory: website
+        env:
+          SOURCE_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -- \
+            assets/docs/Dalton_Kutzen-CV.pdf \
+            assets/docs/Dalton_Kutzen-Resume.pdf
+
+          if git diff --cached --quiet; then
+            echo "PDFs are unchanged."
+            exit 0
+          fi
+
+          git commit \
+            -m "Update CV and resume from papertrail" \
+            -m "Source commit: ${SOURCE_SHA}"
+
+          git push origin HEAD:main
