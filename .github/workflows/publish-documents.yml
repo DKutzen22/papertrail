@@ -34,20 +34,10 @@ jobs:
       - name: Render CV and resume
         working-directory: papertrail
         run: |
-          quarto render 01-cv.qmd \
-            --to pdf \
-            --output Dalton_Kutzen-CV.pdf \
-            --output-dir _publish \
-            --no-clean
+          quarto render 
 
-          quarto render 02-resume.qmd \
-            --to pdf \
-            --output Dalton_Kutzen-Resume.pdf \
-            --output-dir _publish \
-            --no-clean
-
-          test -s _publish/Dalton_Kutzen-CV.pdf
-          test -s _publish/Dalton_Kutzen-Resume.pdf
+          test -s output/Dalton_Kutzen-CV.pdf
+          test -s output/Dalton_Kutzen-Resume.pdf
 
       - name: Check out website
         uses: actions/checkout@v6
@@ -61,10 +51,10 @@ jobs:
         run: |
           mkdir -p website/assets/docs
 
-          cp papertrail/_publish/Dalton_Kutzen-CV.pdf \
+          cp papertrail/output/Dalton_Kutzen-CV.pdf \
             website/assets/docs/Dalton_Kutzen-CV.pdf
 
-          cp papertrail/_publish/Dalton_Kutzen-Resume.pdf \
+          cp papertrail/output/Dalton_Kutzen-Resume.pdf \
             website/assets/docs/Dalton_Kutzen-Resume.pdf
 
       - name: Commit and push updated PDFs
