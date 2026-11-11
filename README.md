@@ -22,37 +22,60 @@ quarto check
 
 ```text
 .
-├── _quarto.yml                    # Project-level Quarto configuration       
-├── 00-formatters.typ              # Typst file that defines formatting functions
-├── 01-cv.qmd                      # CV master document (multi-page, comprehensive)
-├── 02-resume.qmd                  # Resume master document (1-page, focused)
-├── data/                          # Modular .yml files with all relevant info
-│   ├── 00-example-experiences.yml # Example formatting for the render-experiences function
-│   ├── 01-example-research.yml    # Example formatting for the render-research function
-│   ├── 02-example-skills.yml      # Example formatting for the render-skills function
-│   ├── 03-example-awards.yml      # Example formatting for the render-awards function
+├── _quarto.yml                 # Project-level Quarto configuration       
+├── 00-formatters.typ           # Typst file that defines formatting functions
+├── 01-cv.qmd                   # CV master document (multi-page, comprehensive)
+├── 02-resume.qmd               # Resume master document (1-page, focused)
+├── data/                       # Modular .yml files with all relevant info
+│   ├── example-experiences.yml # Example formatting for the render-experiences function
+│   ├── example-research.yml    # Example formatting for the render-research function
+│   ├── example-skills.yml      # Example formatting for the render-skills function
+│   ├── example-awards.yml      # Example formatting for the render-awards function
+│   ├── awards.yml
 │   ├── education.yml
 │   ├── experience.yml
-│   ├── publications.yml
+│   ├── leadership.yml
 │   ├── presentations.yml        
 │   ├── projects.yml
-│   ├── skills.yml 
-│   ├── leadership.yml
-│   └── awards.yml
-├── README.md                      # Project documentation
-└── output/                        # Rendered PDFs
-    ├── {name}-Resume.pdf
-    └── {name}-CV.pdf
+│   ├── publications.yml
+│   └── skills.yml 
+├── README.md                   # Project documentation
+└── output/                     # Rendered PDFs
+    ├── Dalton_Kutzen-Resume.pdf
+    └── Dalton_Kutzen-CV.pdf
 ```
 
-## Change the File Name
+## Configuration
+
+### Candidate Details & Contact Information
+
+Project-wide identity and contact links are configured in `_quarto.yml`:
+
+```yaml
+title: "Dalton Kutzen"
+format:
+  typst:
+    papersize: us-letter
+    linkcolor: "#1F4E79"
+
+config:
+  data-dir: "data"
+  email: "dalton@kutzen.org"
+  github: "dkutzen22"
+  linkedin: "daltonkutzen"
+```
+
+- `title` sets the header name displayed at the top of both the CV and résumé.
+- `config.email`, `config.github`, and `config.linkedin` are used by `#render-contact()` in `00-formatters.typ` to build the hyperlinked contact row.
+
+### Change the Output File Name
 
 Edit the YAML front matter at the top of `01-cv.qmd` or `02-resume.qmd`:
 
 ```yaml
-***
-output-file: "Resume"
-***
+---
+output-file: "Dalton_Kutzen-Resume"
+---
 ```
 
 - `output-file` controls the generated PDF filename.
@@ -60,35 +83,34 @@ output-file: "Resume"
 For example:
 
 ```yaml
-output-file: "Alex_Morgan-Resume"
+output-file: "Dalton_Kutzen-IT-Resume"
 ```
 
 will generate:
 
 ```text
-output/Alex_Morgan-Resume.pdf
+output/Dalton_Kutzen-IT-Resume.pdf
 ```
 
-### Use Markdown in display fields
+### Use Markdown in Display Fields
 
 The shared `prep()` function converts fields selected through `markdown-fields` into Typst content.
 
-For example, when `title` and `description` are selected for conversion:
+For example, when `title` and `details` are converted:
 
 ```yaml
-- title: "[CloudNet — Containerized Microservices Platform](https://github.com/alex-example/cloudnet)"
+- title: "[Phantom — Bacteriophage Analysis Workflow](https://github.com/dkutzen22/phantom)"
   details:
-    - "Architected a scalable microservices web application using Python (FastAPI), React, PostgreSQL, and Redis caching."
+    - "Modular Snakemake pipeline for phage genome annotation and downstream comparative analysis."
   show_in: [resume, cv]
 ```
 
 will generate:
 
+> ***[Phantom — Bacteriophage Analysis Workflow](https://github.com/dkutzen22/phantom)***
+> - Modular Snakemake pipeline for phage genome annotation and downstream comparative analysis.
 
-> ***[CloudNet — Containerized Microservices Platform](https://github.com/alex-example/cloudnet)***
-> - Architected a scalable microservices web application using Python (FastAPI), React, PostgreSQL, and Redis caching.
-
-All fields except show_in are converted by default.
+All display fields except `show_in` are converted by default.
 
 Supported formatting includes Markdown emphasis and links:
 
@@ -98,26 +120,27 @@ Supported formatting includes Markdown emphasis and links:
 [link text](https://example.com)
 ```
 
-### Quote YAML text safely
+### Quote YAML Text Safely
 
 As a project convention, quote single-line display text:
 
 ```yaml
-description: "Tools: Python, R, and Bash"
+organization: "Terooatea Lab, Brigham Young University"
 ```
 
-For Markdown links, quote the whole value but not the URL inside the link:
+For Markdown links, quote the whole value:
 
 ```yaml
-title: "[CloudNet — Containerized Microservices Platform](https://github.com/alex-example/cloudnet)"
+title: "[Phantom — Bacteriophage Analysis Workflow](https://github.com/dkutzen22/phantom)"
 ```
 
 For longer text, use a folded block:
 
 ```yaml
-description: >-
-  Architected a scalable microservices web application
-using Python (FastAPI), React, PostgreSQL, and Redis caching.
+details:
+  - >-
+    Modular Snakemake pipeline for phage genome annotation
+    and downstream comparative analysis.
 ```
 
 Keep actual numbers and booleans unquoted when their data types matter:
@@ -129,16 +152,22 @@ enabled: true
 
 ## Formatting Functions
 
-`00-formatters.typ` contains reusable helpers for preparing and rendering content.
+`00-formatters.typ` contains reusable helpers for preparing and rendering content:
+
+- `#render-contact()`: Renders email, GitHub, and LinkedIn links.
+- `#render-experiences()`: Renders education, work experience, projects, or leadership entries.
+- `#render-research()`: Renders publications, preprints, and presentations.
+- `#render-skills()`: Renders categorized skill lists.
+- `#render-awards()`: Renders honors and awards.
 
 The shared preparation workflow:
 
-1. Loads a YAML file.
-2. Filters entries by document target.
+1. Loads a YAML file from `data-dir`.
+2. Filters entries by document target (`"resume"` vs `"cv"`).
 3. Converts selected Markdown fields to Typst content.
 4. Returns the section heading and prepared entries.
 
-A section can then be rendered from a raw Typst block in a `.qmd` document:
+A section can be rendered from a raw Typst block in a `.qmd` document:
 
 ```{=typst}
 #import "00-formatters.typ": *
@@ -155,7 +184,7 @@ A section can then be rendered from a raw Typst block in a `.qmd` document:
 
 Use `"resume"` as the target in the résumé document.
 
-### Select which documents include an entry
+### Select Which Documents Include an Entry
 
 Use `show_in` to control whether an entry appears in the résumé, CV, or both:
 
@@ -193,9 +222,8 @@ quarto render 02-resume.qmd --to typst
 The rendered PDFs are saved to:
 
 ```text
-output/Resume.pdf
-output/{name}-CV.pdf
+output/Dalton_Kutzen-Resume.pdf
+output/Dalton_Kutzen-CV.pdf
 ```
 
-The output directory and file title are configured in `_quarto.yml`.
-
+The output directory is configured under `project.output-dir` in `_quarto.yml`.
